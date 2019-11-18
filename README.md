@@ -14,7 +14,7 @@ git clone https://github.com/chgeo/incidents.git
 npm install
 ```
 
-## Run
+## Code & Run
 ```sh
 cds watch
 ```
