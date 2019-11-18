@@ -20,7 +20,7 @@
   "cds": {
     "requires": {
       "db": {
-        "model": "srv",
+        "model": ["db", "srv"],
         "[production]": {
           "kind": "hana"
         }
