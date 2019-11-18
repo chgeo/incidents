@@ -1,4 +1,4 @@
-using { IncidentsService } from '../srv/incidents';
+using { IncidentsService } from './incidents';
 using { sap.common } from '@sap/cds/common';
 
 
