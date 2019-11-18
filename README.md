@@ -1,4 +1,4 @@
-## Incidents Management
+# Incidents Management
 Powered by SAP Cloud Application Programming Model
 
 ## Setup
