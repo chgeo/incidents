@@ -2,6 +2,7 @@ using acme.cloud from '../db/schema';
 
 service IncidentsService {
 
+  @odata.draft.enabled
   entity Incidents as projection on cloud.Incidents;
 
   @readonly entity Category as projection on cloud.Category;

@@ -10,6 +10,7 @@ annotate IncidentsService.Incidents with @(
       {$Type: 'UI.DataField', Value: "priority/name"},
       {$Type: 'UI.DataField', Value: "category/name"},
     ],
+    Identifiction: [ {Value:title} ],
     HeaderInfo: {
       Title: { Value: title },
       Description: { Value: title },
@@ -17,20 +18,24 @@ annotate IncidentsService.Incidents with @(
       TypeNamePlural: 'Incidents'
     },
     Facets: [
-      {$Type: 'UI.ReferenceFacet', Label: '{i18n>Misc}', Target: '@UI.FieldGroup#Misc'},
+      {$Type: 'UI.ReferenceFacet', Label: '{i18n>Header}', Target: '@UI.FieldGroup#Header'},
       {$Type: 'UI.ReferenceFacet', Label: '{i18n>Details}', Target: '@UI.FieldGroup#Descr'},
     ],
-    FieldGroup#Misc: {
+    FieldGroup#Header: {
       Data: [
-        {Value: priority.name}, {Value: category.name},
+        {Value: priority_code}, {Value: category_code},
         {Value: createdBy},{Value: createdAt}, {Value: modifiedBy},{Value: modifiedAt}
       ]
     },
     FieldGroup#Descr: {
-      Data: [{Value: description}]
+      Data: [{ Value: title }, {Value: description}]
     }
   }
 );
+
+annotate IncidentsService.Incidents with {
+  description @UI.MultiLineText;
+};
 
 annotate common.CodeList with { code @UI.HiddenFilter; };
 
