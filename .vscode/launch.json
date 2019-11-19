@@ -6,11 +6,21 @@
     "configurations": [
         {
             "name": "cds run",
+            "type": "node",
             "request": "launch",
-            "type": "node", "runtimeExecutable": "npx","runtimeArgs": [ "-n" ],
-            "args": [ "--","cds","run","--in-memory?" ], // the leading "--" arg ensures it works with as well as without debugging
-            "console": "integratedTerminal",
-            "skipFiles": [ "<node_internals>/**" ]
+            "program": "${workspaceFolder}/.vscode/cds",
+            "args": [
+                "run",
+                "--in-memory?"
+            ],
+            "skipFiles": [
+                "<node_internals>//*.js",
+                "/cds-reflect/lib/index.js",
+                "/cds/lib/index.js",
+                "/.vscode/cds.js"
+            ],
+            "autoAttachChildProcesses": true,
+            "console": "integratedTerminal"
         }
     ]
 }
