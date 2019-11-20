@@ -19,8 +19,7 @@ entity Employees {
       firstName : String(100);
       lastName  : String(100);
       email     : String(100);
-      incident  : Association to many Incidents
-                    on incident.assignedEmployee = $self;
+      incident  : Association to many Incidents on incident.assignedEmployee = $self;
 }
 
 entity IncidentsCodeList : common.CodeList {
