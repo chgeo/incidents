@@ -11,6 +11,7 @@ npm install -g @sap/cds-dk
 Then:
 ```sh
 git clone https://github.com/chgeo/incidents.git
+cd indicents
 npm install
 ```
 
