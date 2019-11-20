@@ -23,9 +23,9 @@ entity Employees {
                     on incident.assignedEmployee = $self;
 }
 
-extend common.CodeList with {
+entity IncidentsCodeList : common.CodeList {
   key code : String(20);
 }
 
-entity Category : common.CodeList {}
-entity Priority : common.CodeList {}
+entity Category : IncidentsCodeList {}
+entity Priority : IncidentsCodeList {}

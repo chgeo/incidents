@@ -1,4 +1,4 @@
-using { IncidentsService } from './incidents';
+using { IncidentsService, acme.cloud } from './incidents';
 using { sap.common } from '@sap/cds/common';
 
 
@@ -37,7 +37,7 @@ annotate IncidentsService.Incidents with {
   description @UI.MultiLineText;
 };
 
-annotate common.CodeList with { code @UI.HiddenFilter; };
+annotate cloud.IncidentsCodeList with { code @UI.HiddenFilter; };
 
 annotate IncidentsService.Category with {
   name @title: 'Category';
