@@ -10,6 +10,9 @@ annotate IncidentsService.Incidents with @(
       {$Type: 'UI.DataField', Value: title},
       {$Type: 'UI.DataField', Value: "priority/name"},
       {$Type: 'UI.DataField', Value: "category/name"},
+      {$Type: 'UI.DataField', Value: "createdBy"},
+      {$Type: 'UI.DataField', Value: "modifiedAt"},
+
     ],
     // --- for the details page ---
     HeaderInfo: {
@@ -40,6 +43,8 @@ annotate IncidentsService.Incidents with {
   // only show the name in texts, not the technical code
   priority     @Common.Text: "priority/name" @Common.TextArrangement: #TextOnly;
   category     @Common.Text: "category/name" @Common.TextArrangement: #TextOnly;
+  createdBy    @title: 'Reported by';
+  modifiedAt   @title: 'Last changed at';
 };
 
 // applies to all our code lists
